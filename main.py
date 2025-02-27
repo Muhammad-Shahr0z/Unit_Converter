@@ -58,3 +58,37 @@ if category:
     if st.button("Convert"):
         result = convert_units(value, from_unit, to_unit, category)
         st.success(f"{value:.4f} {from_unit} = {result:.4f} {to_unit}")
+
+
+
+
+# Custom CSS for Footer
+footer_style = """
+    <style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+"""
+st.markdown(footer_style, unsafe_allow_html=True)
+
+# Footer HTML
+footer = """
+    <div class="footer">
+        Made with ❤️ by Muhammad Shahroz
+    </div>
+"""
+st.markdown(footer, unsafe_allow_html=True)
