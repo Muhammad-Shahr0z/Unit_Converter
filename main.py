@@ -60,8 +60,6 @@ if category:
         st.success(f"{value:.4f} {from_unit} = {result:.4f} {to_unit}")
 
 
-
-
 # Custom CSS for Footer
 footer_style = """
     <style>
