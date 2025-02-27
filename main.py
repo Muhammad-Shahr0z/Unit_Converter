@@ -1,8 +1,8 @@
 import streamlit as st
 
 
-#  Global conversion factors
-# Nested Dictionary
+#  Global conversion factors...
+# Nested Dictionary..
 conversion_factors = {
     "Length": {
         "meter": 1, "kilometer": 0.001, "centimeter": 100, "millimeter": 1000, "mile": 0.000621371, "yard": 1.09361, "foot": 3.28084, "inch": 39.3701
@@ -30,7 +30,7 @@ conversion_factors = {
     }
 }
 
-# function TO conversion_factors
+# function TO conversion_factors...
 def convert_units(value, from_unit, to_unit, category):
     if category == "Temperature":
         return conversion_factors[category][to_unit](conversion_factors[category][from_unit](value))
@@ -38,15 +38,15 @@ def convert_units(value, from_unit, to_unit, category):
     return value * (conversion_factors[category][to_unit] / conversion_factors[category][from_unit])
 
 
-#HEADINGS
+#HEADINGS....
 st.set_page_config(page_title="Unit Converter by Shahroz", layout="wide")
-st.title("🌍 Universal Unit Converter")
+st.title(" Unit Converter")
 st.write("Convert between different units easily!")
 
-# Saare available categories list me rakh li
+# Saare available categories list me rakh liyee hain...
 categories = list(conversion_factors.keys()) 
 
-#CATEGORY CHECKBOX
+#CATEGORY CHECKBOX....
 category = st.selectbox("Select Category", categories)
 
 if category:
